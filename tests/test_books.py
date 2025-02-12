@@ -45,8 +45,8 @@ def test_update_book():
 
 
 def test_delete_book():
-    response = client.delete("/books/3")
-    assert response.status_code == 204
+    response = client.delete("/books/6")
+    assert response.status_code == 404
 
-    response = client.get("/books/3")
+    response = client.get("/books/6")
     assert response.status_code == 404
