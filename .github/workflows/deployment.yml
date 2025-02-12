@@ -3,7 +3,7 @@ name: Deployment Pipeline
 on:
   push:
     branches:
-      - main  # Trigger deployment when code is merged into main
+      - main  
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python3-version: "3.13.1"  
+          python3 --version: "3.13.1"  
 
       - name: Install dependencies
         run: |
